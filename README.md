@@ -109,10 +109,14 @@ Keep planner updates in sync with `server-mcp/Housing-Property-Agent-MCP/PLAN.md
 - `VITE_MASTER_SERVER_BASE` - URL of the FastAPI master server (defaults to `http://localhost:8000`).
 - `VITE_LEASE_ID` - Demo lease ID (defaults to `1`).
 - `VITE_TENANT_EMAIL` - Email injected into chat requests when tickets are created.
+- `VITE_TTS_VOICE` - Optional NewportAI clone voice identifier to request from the `/tts` proxy.
+- `VITE_TTS_MODEL` - Optional NewportAI model override propagated to the `/tts` proxy.
+- `VITE_TTS_VOICE_ID` - Optional NewportAI clone voice ID forwarded to the `/tts` proxy.
+- `VITE_TTS_VOICE_NAME` - Optional explicit voice display name when it differs from `VITE_TTS_VOICE`.
 
 **Backend:**
 - `ANTHROPIC_API_KEY` - Optional; enables LLM-backed planning. Use `NO_LLM=1` when running tests without network access.
-- `NEWPORT_API_KEY`, `NEWPORT_TTS_URL`, `TTS_MODEL`, `TTS_VOICE` - Configure the `/tts` proxy for NewportAI.
+- `NEWPORT_API_KEY`, `NEWPORT_TTS_URL`, `TTS_MODEL`, `TTS_VOICE`, `TTS_VOICE_ID`, `TTS_VOICE_NAME` - Configure the `/tts` proxy for NewportAI (defaults target the Do TTS Clone endpoint).
 
 ## API Endpoints (FastAPI Master Server)
 - `POST /chat` - Processes a maintenance prompt and returns a combined response.
@@ -127,7 +131,7 @@ Visit `http://localhost:8000/docs` to explore the automatically generated OpenAP
 ## Troubleshooting
 - **404 on `/tenant/requests`** - Ensure the master server is running from `server-mcp/Housing-Property-Agent-MCP` and the SQLite DB has been initialized.
 - **500 on `/chat`** - MCP tool servers failed to start or the database is missing. Reinstall dependencies, verify `server_config.json`, and rerun the SQLite seed scripts.
-- **Silent `/tts` responses** - Provide a `NEWPORT_API_KEY`; without it the server returns a short silent WAV (see response headers for `X-TTS-Fallback`).
+- **502 on `/tts`** - Provide a `NEWPORT_API_KEY`; without it the server responds with 502 so you can debug TTS configuration.
 - **Workflows not updating** - Confirm the filesystem MCP server is using the correct path to `public/workflows.json` and that the file remains a JSON array.
 
 ## Additional Resources

@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Build output
+/dist/
+/build/
+/.vite/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun-debug.log*
+*.log
+
+# Testing and coverage
+coverage/
+.vitest/
+
+# TypeScript
+*.tsbuildinfo
+
+# Editor and OS files
+.DS_Store
+.vscode/
+.idea/
+
+# Misc
+*.swp

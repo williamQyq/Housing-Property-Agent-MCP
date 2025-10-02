@@ -5,6 +5,8 @@
 
 set -e
 
+export NEWPORT_API_KEY=4ed1a9a571cf4ca2ba19dcdd26c33dc8
+
 echo "🏠 Housing Agent MCP Demo Startup"
 echo "================================="
 

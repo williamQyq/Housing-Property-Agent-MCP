@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "./.venv/bin/python",
+      "args": [
+        "mcp_servers/mcp_filesystem_server.py"
+      ]
+    },
+    "sequentialthinking": {
+      "command": "./.venv/bin/python",
+      "args": [
+        "mcp_servers/mcp_sequential_server.py"
+      ]
+    },
+    "sqlite": {
+      "command": "./.venv/bin/python",
+      "args": [
+        "mcp_servers/mcp_sqlite_server.py"
+      ]
+    },
+    "phone-tts": {
+      "command": "./.venv/bin/python",
+      "args": [
+        "mcp_servers/mcp_phone_tts_server.py"
+      ]
+    }
+  }
+}

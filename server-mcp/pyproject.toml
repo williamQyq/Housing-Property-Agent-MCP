@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "housing-property-agent-mcp"
+version = "0.0.0"
+description = "Housing Property Agent MCP server"
+readme = "README.md"
+license = { file = "LICENSE" }
+dependencies = [
+  "fastapi>=0.111.0",
+  "uvicorn[standard]>=0.30.0",
+  "anthropic>=0.34.0",
+  "python-dotenv>=1.0.1",
+  "mcp>=1.14.1",
+  "typing-extensions==4.15.0",
+]
+

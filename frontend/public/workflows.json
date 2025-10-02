@@ -1,0 +1,83 @@
+[
+  {
+    "id": "132ed40dba2445158c47e651ff67de84",
+    "createdAt": "2025-09-27T19:33:34.981395Z",
+    "prompt": "dinning chair is borken, ask landlord to fix it",
+    "steps": [
+      {
+        "title": "Review maintenance request",
+        "status": "done",
+        "note": "Fallback when planner is unavailable"
+      },
+      {
+        "title": "Draft response for tenant",
+        "status": "done",
+        "note": "Fallback guidance for tenant"
+      }
+    ],
+    "result": {
+      "type": "plan",
+      "data": {
+        "category": "other",
+        "priority": "medium",
+        "responsibility": "unknown",
+        "stepCount": 2,
+        "source": "unknown"
+      }
+    }
+  },
+  {
+    "id": "d1ae8be1287d410da72de41d7efe9f74",
+    "createdAt": "2025-09-27T19:35:58.449073Z",
+    "prompt": "what is my monthly rent",
+    "steps": [
+      {
+        "title": "Review maintenance request",
+        "status": "done",
+        "note": "Fallback when planner is unavailable"
+      },
+      {
+        "title": "Draft response for tenant",
+        "status": "done",
+        "note": "Fallback guidance for tenant"
+      }
+    ],
+    "result": {
+      "type": "plan",
+      "data": {
+        "category": "other",
+        "priority": "medium",
+        "responsibility": "unknown",
+        "stepCount": 2,
+        "source": "unknown"
+      }
+    }
+  },
+  {
+    "id": "9dacc31081744e01b4ce8c3536364152",
+    "createdAt": "2025-09-27T19:36:52.482047Z",
+    "prompt": "when is my rent start, my lease id is 1",
+    "steps": [
+      {
+        "title": "Review maintenance request",
+        "status": "done",
+        "note": "Fallback when planner is unavailable"
+      },
+      {
+        "title": "Draft response for tenant",
+        "status": "done",
+        "note": "Fallback guidance for tenant"
+      }
+    ],
+    "result": {
+      "type": "plan",
+      "data": {
+        "category": "other",
+        "priority": "medium",
+        "responsibility": "unknown",
+        "stepCount": 2,
+        "source": "unknown"
+      }
+    }
+  }
+]
