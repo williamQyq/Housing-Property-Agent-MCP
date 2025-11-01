@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/frontend/Housing-Agent-Lovable" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/server-mcp/Housing-Property-Agent-MCP" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plaid-pay" vcs="Git" />
   </component>
 </project>

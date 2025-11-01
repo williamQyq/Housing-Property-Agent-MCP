@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agent-mcp-service
+  labels:
+    app: agent-mcp-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: agent-mcp-service
+  template:
+    metadata:
+      labels:
+        app: agent-mcp-service
+    spec:
+      containers:
+      - name: agent-mcp-service
+        image: housing/agent-mcp-service:latest
+        ports:
+        - containerPort: 8083
+        env:
+        - name: PORT
+          value: "8083"
+        - name: ENVIRONMENT
+          value: "production"
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "200m"
+          limits:
+            memory: "512Mi"
+            cpu: "400m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8083
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8083
+          initialDelaySeconds: 5
+          periodSeconds: 5
