@@ -1,0 +1,11 @@
+project_id      = "your-gcp-project-id"
+region          = "us-central1"
+cluster_location = "us-central1-a"
+cluster_name    = "housing-agent-cluster"
+subnet_cidr     = "10.10.0.0/20"
+pod_cidr        = "10.20.0.0/16"
+service_cidr    = "10.30.0.0/20"
+node_machine_type  = "e2-standard-2"
+node_image_type    = "UBUNTU_CONTAINERD"
+node_disk_size_gb  = 100
+# node_zones = ["us-central1-a", "us-central1-b"]
